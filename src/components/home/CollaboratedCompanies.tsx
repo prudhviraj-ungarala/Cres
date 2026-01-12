@@ -1,0 +1,72 @@
+import { motion } from "framer-motion";
+import { Building2 } from "lucide-react";
+
+const companies = [
+  { name: "TechCorp Industries", initials: "TC" },
+  { name: "GlobalTech Solutions", initials: "GT" },
+  { name: "DataFlow Systems", initials: "DF" },
+  { name: "InnovateCo", initials: "IC" },
+  { name: "CloudNine Technologies", initials: "CN" },
+  { name: "SecureNet Systems", initials: "SN" },
+  { name: "Digital Dynamics", initials: "DD" },
+  { name: "FutureTech Labs", initials: "FT" },
+  { name: "SmartBiz Solutions", initials: "SB" },
+  { name: "NextGen Innovations", initials: "NG" },
+  { name: "Alpha Networks", initials: "AN" },
+  { name: "Pinnacle Tech", initials: "PT" },
+];
+
+export const CollaboratedCompanies = () => {
+  // Duplicate for seamless loop
+  const duplicatedCompanies = [...companies, ...companies];
+
+  return (
+    <section className="py-16 bg-muted/30 overflow-hidden">
+      <div className="container mx-auto px-4 mb-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            <Building2 className="w-4 h-4" />
+            Trusted Partners
+          </span>
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
+            Our <span className="text-primary">Collaborated Companies</span>
+          </h2>
+        </motion.div>
+      </div>
+
+      {/* Scrolling Container */}
+      <div className="relative">
+        {/* Gradient Overlays */}
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-muted/30 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-muted/30 to-transparent z-10 pointer-events-none" />
+
+        {/* Marquee */}
+        <div className="flex animate-marquee hover:pause-animation">
+          {duplicatedCompanies.map((company, index) => (
+            <div
+              key={`${company.name}-${index}`}
+              className="flex-shrink-0 mx-6 group"
+            >
+              <div className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 min-w-[160px]">
+                {/* Logo Placeholder */}
+                <div className="w-16 h-16 rounded-xl bg-muted flex items-center justify-center text-xl font-bold text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300">
+                  {company.initials}
+                </div>
+                {/* Company Name */}
+                <span className="text-sm font-medium text-foreground text-center whitespace-nowrap">
+                  {company.name}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
