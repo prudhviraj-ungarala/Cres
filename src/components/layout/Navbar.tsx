@@ -45,11 +45,7 @@ export const Navbar = () => {
             <motion.div whileHover={{
             scale: 1.05
           }} className="relative">
-              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/30 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300">
-                <span className="text-primary-foreground font-heading font-bold text-xl">
-                  CGS
-                </span>
-              </div>
+              <img src="/src/assets/logo.jpeg" alt="CGS Logo" className="w-12 h-12 rounded-xl shadow-lg shadow-primary/30 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300" />
             </motion.div>
             <div className="hidden sm:block">
               <span className="font-heading font-bold text-lg text-foreground">

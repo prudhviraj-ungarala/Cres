@@ -2,18 +2,18 @@ import { motion } from "framer-motion";
 import { Building2 } from "lucide-react";
 
 const companies = [
-  { name: "TechCorp Industries", initials: "TC" },
-  { name: "GlobalTech Solutions", initials: "GT" },
-  { name: "DataFlow Systems", initials: "DF" },
-  { name: "InnovateCo", initials: "IC" },
-  { name: "CloudNine Technologies", initials: "CN" },
-  { name: "SecureNet Systems", initials: "SN" },
-  { name: "Digital Dynamics", initials: "DD" },
-  { name: "FutureTech Labs", initials: "FT" },
-  { name: "SmartBiz Solutions", initials: "SB" },
-  { name: "NextGen Innovations", initials: "NG" },
-  { name: "Alpha Networks", initials: "AN" },
-  { name: "Pinnacle Tech", initials: "PT" },
+  { name: "TechCorp Industries" },
+  { name: "GlobalTech Solutions" },
+  { name: "DataFlow Systems" },
+  { name: "InnovateCo" },
+  { name: "CloudNine Technologies" },
+  { name: "SecureNet Systems" },
+  { name: "Digital Dynamics" },
+  { name: "FutureTech Labs" },
+  { name: "SmartBiz Solutions" },
+  { name: "NextGen Innovations" },
+  { name: "Alpha Networks" },
+  { name: "Pinnacle Tech" },
 ];
 
 export const CollaboratedCompanies = () => {
@@ -54,10 +54,12 @@ export const CollaboratedCompanies = () => {
               className="flex-shrink-0 mx-6 group"
             >
               <div className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 min-w-[160px]">
-                {/* Logo Placeholder */}
-                <div className="w-16 h-16 rounded-xl bg-muted flex items-center justify-center text-xl font-bold text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300">
-                  {company.initials}
-                </div>
+                {/* Logo */}
+                <img
+                  src={`https://avatar.vercel.sh/${company.name}.svg?text=${company.name.substring(0,2)}`}
+                  alt={`${company.name} Logo`}
+                  className="w-16 h-16 rounded-xl bg-muted transition-all duration-300"
+                />
                 {/* Company Name */}
                 <span className="text-sm font-medium text-foreground text-center whitespace-nowrap">
                   {company.name}

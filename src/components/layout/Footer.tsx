@@ -24,9 +24,6 @@ const footerLinks = {
   }, {
     name: "AI & Machine Learning",
     href: "/services"
-  }, {
-    name: "Cybersecurity",
-    href: "/services"
   }],
   resources: [{
     name: "Case Studies",
@@ -66,12 +63,8 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-6">CGS
-CrestonixGlobal Solutions<div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-heading font-bold text-xl">
-                  CGS
-                </span>
-              </div>
+            <Link to="/" className="flex items-center gap-2 mb-6">
+              <img src="/src/assets/logo.jpeg" alt="CGS Logo" className="w-12 h-12 rounded-xl" />
               <div>
                 <span className="font-heading font-bold text-lg text-background">
                   Crestonix

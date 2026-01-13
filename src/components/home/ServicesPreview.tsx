@@ -1,47 +1,15 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Code, Cloud, Shield, Cpu, Database, Globe } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { services } from "@/lib/services";
 
-const services = [
-  {
-    icon: Code,
-    title: "Software Development",
-    description: "Custom software solutions tailored to your business needs, from web apps to enterprise systems.",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Solutions",
-    description: "Scalable cloud infrastructure and migration services for optimal performance and cost efficiency.",
-  },
-  {
-    icon: Shield,
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your digital assets and ensure compliance.",
-  },
-  {
-    icon: Cpu,
-    title: "AI & Machine Learning",
-    description: "Intelligent automation and data-driven insights powered by cutting-edge AI technologies.",
-  },
-  {
-    icon: Database,
-    title: "Data Analytics",
-    description: "Transform raw data into actionable business intelligence with our analytics solutions.",
-  },
-  {
-    icon: Globe,
-    title: "Digital Transformation",
-    description: "End-to-end digital strategies to modernize operations and enhance customer experiences.",
-  },
-];
-
-const ServiceCard = ({ 
-  service, 
-  index 
-}: { 
-  service: typeof services[0]; 
+const ServiceCard = ({
+  service,
+  index
+}: {
+  service: typeof services[0];
   index: number;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -69,95 +37,79 @@ const ServiceCard = ({
       onMouseLeave={() => setIsHovered(false)}
       className="group relative perspective-1000"
     >
-      <motion.div
-        animate={{
-          rotateX: isHovered ? 5 : 0,
-          rotateY: isHovered ? -5 : 0,
-          scale: isHovered ? 1.03 : 1,
-          z: isHovered ? 50 : 0
-        }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
-        className="relative preserve-3d h-full"
-      >
-        {/* Main Card with Unique Shape */}
-        <div 
-          className="relative p-8 bg-card border border-border/50 shadow-lg group-hover:shadow-2xl group-hover:shadow-primary/20 transition-all duration-500 h-full"
-          style={{ clipPath: getClipPath(index) }}
+      <Link to={`/services/${service.slug}`} className="block h-full">
+        <motion.div
+          animate={{
+            rotateX: isHovered ? 5 : 0,
+            rotateY: isHovered ? -5 : 0,
+            scale: isHovered ? 1.03 : 1,
+            z: isHovered ? 50 : 0
+          }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="relative preserve-3d h-full"
         >
-          {/* Animated Background Gradient */}
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          {/* Main Card with Unique Shape */}
+          <div
+            className="relative p-8 bg-card border border-border/50 shadow-lg group-hover:shadow-2xl group-hover:shadow-primary/20 transition-all duration-500 h-full flex flex-col"
+            style={{ clipPath: getClipPath(index) }}
+          >
+            {/* Animated Background Gradient */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              style={{ clipPath: getClipPath(index) }}
+            />
+
+            {/* Image */}
+            <div className="mb-6 overflow-hidden" style={{ clipPath: getClipPath(index) }}>
+              <motion.img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-40 object-cover"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.4 }}
+              />
+            </div>
+
+            {/* Content */}
+            <div className="flex-grow">
+              <h3 className="text-xl font-heading font-bold text-foreground mb-3 group-hover:text-primary transition-colors relative z-10">
+                {service.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-6 relative z-10">
+                {service.description}
+              </p>
+            </div>
+
+            {/* Link with Animated Arrow */}
+            <div className="mt-auto">
+              <div
+                className="inline-flex items-center gap-2 text-primary font-semibold group/link relative z-10"
+              >
+                <span>Learn More</span>
+                <motion.div
+                  animate={{ x: isHovered ? 5 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </motion.div>
+              </div>
+            </div>
+
+            {/* Decorative Line */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: isHovered ? 1 : 0 }}
+              className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary origin-left"
+            />
+          </div>
+
+          {/* 3D Shadow Layer */}
+          <div
+            className="absolute inset-0 bg-foreground/5 -z-10 translate-x-2 translate-y-2 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-300"
             style={{ clipPath: getClipPath(index) }}
           />
-
-          {/* 3D Floating Corner Accent */}
-          <motion.div
-            animate={{
-              scale: isHovered ? 1.2 : 1,
-              rotate: isHovered ? 45 : 0
-            }}
-            className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-primary/20 to-transparent rounded-lg"
-          />
-
-          {/* Icon with 3D Transform */}
-          <motion.div
-            animate={{ 
-              y: isHovered ? -8 : 0,
-              rotateZ: isHovered ? 5 : 0
-            }}
-            className="relative mb-6"
-          >
-            <div 
-              className="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/30"
-              style={{
-                clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)" // Octagon
-              }}
-            >
-              <service.icon className="w-8 h-8 text-primary-foreground" />
-            </div>
-            {/* Icon Glow Effect */}
-            <motion.div
-              animate={{ scale: isHovered ? 1.5 : 0, opacity: isHovered ? 0.5 : 0 }}
-              className="absolute inset-0 bg-primary/30 blur-xl"
-            />
-          </motion.div>
-
-          {/* Content */}
-          <h3 className="text-xl font-heading font-bold text-foreground mb-3 group-hover:text-primary transition-colors relative z-10">
-            {service.title}
-          </h3>
-          <p className="text-muted-foreground leading-relaxed mb-6 relative z-10">
-            {service.description}
-          </p>
-
-          {/* Link with Animated Arrow */}
-          <Link 
-            to="/services" 
-            className="inline-flex items-center gap-2 text-primary font-semibold group/link relative z-10"
-          >
-            <span>Learn More</span>
-            <motion.div
-              animate={{ x: isHovered ? 5 : 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <ArrowRight className="w-4 h-4" />
-            </motion.div>
-          </Link>
-
-          {/* Decorative Line */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: isHovered ? 1 : 0 }}
-            className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary origin-left"
-          />
-        </div>
-
-        {/* 3D Shadow Layer */}
-        <div 
-          className="absolute inset-0 bg-foreground/5 -z-10 translate-x-2 translate-y-2 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-300"
-          style={{ clipPath: getClipPath(index) }}
-        />
-      </motion.div>
+        </motion.div>
+      </Link>
     </motion.div>
   );
 };
@@ -165,6 +117,7 @@ const ServiceCard = ({
 export const ServicesPreview = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const servicesToDisplay = services.slice(0, 6);
 
   return (
     <section ref={ref} className="py-24 bg-background relative overflow-hidden">
@@ -190,7 +143,7 @@ export const ServicesPreview = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -203,14 +156,14 @@ export const ServicesPreview = () => {
             Comprehensive IT Solutions
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            From concept to deployment, we deliver end-to-end technology solutions 
+            From concept to deployment, we deliver end-to-end technology solutions
             that drive innovation and accelerate your business growth.
           </p>
         </motion.div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {services.map((service, index) => (
+          {servicesToDisplay.map((service, index) => (
             <ServiceCard key={service.title} service={service} index={index} />
           ))}
         </div>
