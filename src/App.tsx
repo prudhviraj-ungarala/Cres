@@ -9,7 +9,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient(); 
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
