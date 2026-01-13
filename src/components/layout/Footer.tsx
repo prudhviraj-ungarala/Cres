@@ -135,7 +135,7 @@ export const Footer = () => {
         <div className="container mx-auto px-4 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-background/60 text-sm">
-              © {new Date().getFullYear()} Crestonix Global Solutions. All rights reserved.
+              © 2025 Crestonix Global Solutions. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link to="/privacy-policy" className="text-background/60 hover:text-primary text-sm transition-colors">
