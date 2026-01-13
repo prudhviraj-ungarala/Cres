@@ -45,7 +45,7 @@ export const Navbar = () => {
             <motion.div whileHover={{
             scale: 1.05
           }} className="relative">
-              <img src="/src/assets/logo.jpeg" alt="CGS Logo" className="w-12 h-12 rounded-xl shadow-lg shadow-primary/30 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300" />
+              <img src="/src/assets/LoGo.png" alt="CGS Logo" className="w-12 h-12 rounded-xl shadow-lg shadow-primary/30 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300" />
             </motion.div>
             <div className="hidden sm:block">
               <span className="font-heading font-bold text-lg text-foreground">
@@ -66,7 +66,7 @@ export const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button variant="default" size="default" asChild>
-              <Link to="/contact">Get Started</Link>
+              <Link to="/contact">Get Service</Link>
             </Button>
           </div>
 
@@ -115,7 +115,7 @@ export const Navbar = () => {
             delay: 0.4
           }} className="pt-4">
                 <Button variant="default" size="lg" className="w-full" asChild>
-                  <Link to="/contact">Get Started</Link>
+                  <Link to="/contact">Get Service</Link>
                 </Button>
               </motion.div>
             </div>

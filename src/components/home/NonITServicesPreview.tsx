@@ -3,13 +3,13 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { itServices } from "@/lib/services";
+import { nonItServices } from "@/lib/services";
 
 const ServiceCard = ({
   service,
   index
 }: {
-  service: typeof itServices[0];
+  service: typeof nonItServices[0];
   index: number;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -114,12 +114,10 @@ const ServiceCard = ({
   );
 };
 
-export { ServiceCard };
-
-export const ServicesPreview = () => {
+export const NonITServicesPreview = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const servicesToDisplay = itServices.slice(0, 6);
+  const servicesToDisplay = nonItServices.slice(0, 6);
 
   return (
     <section ref={ref} className="py-24 bg-background relative overflow-hidden">
@@ -155,11 +153,10 @@ export const ServicesPreview = () => {
             Our Services
           </motion.span>
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Comprehensive IT Solutions
+            Comprehensive Non-IT Solutions
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            From concept to deployment, we deliver end-to-end technology solutions
-            that drive innovation and accelerate your business growth.
+            Beyond technology, we offer a suite of services to support and streamline your business operations for optimal efficiency.
           </p>
         </motion.div>
 

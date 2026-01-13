@@ -231,3 +231,6 @@ export const services = [
     type: "non-it"
   },
 ];
+
+export const itServices = services.filter(s => s.type === 'it');
+export const nonItServices = services.filter(s => s.type === 'non-it');

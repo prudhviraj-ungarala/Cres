@@ -56,7 +56,7 @@ export const CollaboratedCompanies = () => {
               <div className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 min-w-[160px]">
                 {/* Logo */}
                 <img
-                  src={`https://avatar.vercel.sh/${company.name}.svg?text=${company.name.substring(0,2)}`}
+                  src={`https://placehold.co/100x100/${Math.floor(Math.random()*16777215).toString(16)}/white?text=${company.name.substring(0,2)}`}
                   alt={`${company.name} Logo`}
                   className="w-16 h-16 rounded-xl bg-muted transition-all duration-300"
                 />

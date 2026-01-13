@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Code, Cloud, Shield, Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/LoGo.png";
 
 const FloatingIcon = ({ 
   Icon, 

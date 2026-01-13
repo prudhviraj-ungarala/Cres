@@ -1,9 +1,8 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Button } from "@/components/ui/button";
 import { 
   ArrowRight,
 } from "lucide-react";
@@ -52,9 +51,9 @@ const ServiceCard = ({
 const Services = () => {
   const heroRef = useRef(null);
   const isHeroInView = useInView(heroRef, { once: true });
-  const [activeTab, setActiveTab] = useState<"it" | "non-it">("it");
 
-  const filteredServices = services.filter(s => s.type === activeTab);
+  const itServices = services.filter(s => s.type === "it");
+  const nonItServices = services.filter(s => s.type === "non-it");
 
   return (
     <main className="min-h-screen bg-background">
@@ -98,7 +97,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* IT Services Grid */}
       <section className="py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -108,7 +107,7 @@ const Services = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              Explore Our Services
+              Comprehensive IT Solutions
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Each of our services is designed to address specific business challenges 
@@ -116,27 +115,37 @@ const Services = () => {
             </p>
           </motion.div>
 
-          <div className="flex justify-center mb-12">
-            <div className="flex gap-2 p-2 bg-secondary rounded-full">
-              <Button
-                variant={activeTab === 'it' ? 'default' : 'ghost'}
-                onClick={() => setActiveTab('it')}
-                className="rounded-full"
-              >
-                IT Services
-              </Button>
-              <Button
-                variant={activeTab === 'non-it' ? 'default' : 'ghost'}
-                onClick={() => setActiveTab('non-it')}
-                className="rounded-full"
-              >
-                Non-IT Services
-              </Button>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {itServices.map((service, index) => (
+              <ServiceCard 
+                key={service.title} 
+                service={service} 
+                index={index}
+              />
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* Non-IT Services Grid */}
+      <section className="py-24 bg-secondary">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+              Comprehensive Non-IT Solutions
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Beyond technology, we offer a range of business process services to streamline your operations and drive growth.
+            </p>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+            {nonItServices.map((service, index) => (
               <ServiceCard 
                 key={service.title} 
                 service={service} 

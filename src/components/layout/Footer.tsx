@@ -64,13 +64,13 @@ export const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <img src="/src/assets/logo.jpeg" alt="CGS Logo" className="w-12 h-12 rounded-xl" />
+              <img src="/src/assets/LoGo.png" alt="CGS Logo" className="w-12 h-12 rounded-xl" />
               <div>
                 <span className="font-heading font-bold text-lg text-background">
                   Crestonix
                 </span>
                 <span className="font-heading font-bold text-lg text-primary ml-1">
-                  Global
+                  Global Solutions
                 </span>
               </div>
             </Link>
@@ -141,10 +141,10 @@ export const Footer = () => {
               © {new Date().getFullYear()} Crestonix Global Solutions. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <Link to="/about" className="text-background/60 hover:text-primary text-sm transition-colors">
+              <Link to="/privacy-policy" className="text-background/60 hover:text-primary text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/about" className="text-background/60 hover:text-primary text-sm transition-colors">
+              <Link to="/terms-of-service" className="text-background/60 hover:text-primary text-sm transition-colors">
                 Terms of Service
               </Link>
             </div>
