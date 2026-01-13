@@ -175,8 +175,8 @@ export const NonITServicesPreview = () => {
           className="text-center"
         >
           <Button variant="default" size="lg" asChild>
-            <Link to="/services" className="group">
-              View All Services
+            <Link to="/services?category=non-it" className="group">
+              View NON IT services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>

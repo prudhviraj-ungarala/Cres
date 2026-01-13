@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { 
@@ -52,8 +52,15 @@ const Services = () => {
   const heroRef = useRef(null);
   const isHeroInView = useInView(heroRef, { once: true });
 
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const category = queryParams.get('category');
+
   const itServices = services.filter(s => s.type === "it");
   const nonItServices = services.filter(s => s.type === "non-it");
+
+  const showIt = !category || category === 'it';
+  const showNonIt = !category || category === 'non-it';
 
   return (
     <main className="min-h-screen bg-background">
@@ -77,11 +84,10 @@ const Services = () => {
               Our Services
             </span>
             <h1 className="text-4xl md:text-6xl font-heading font-bold text-primary-foreground mb-6">
-              Comprehensive IT Solutions for Modern Businesses
+              Explore Our Solutions
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed">
-              From custom software development to cloud migration and AI integration, 
-              we deliver end-to-end technology solutions that drive growth.
+              We deliver end-to-end solutions that drive growth, efficiency, and innovation for businesses of all sizes.
             </p>
           </motion.div>
         </div>
@@ -98,63 +104,67 @@ const Services = () => {
       </section>
 
       {/* IT Services Grid */}
-      <section className="py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              Comprehensive IT Solutions
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Each of our services is designed to address specific business challenges 
-              while integrating seamlessly with your existing infrastructure.
-            </p>
-          </motion.div>
+      {showIt && (
+        <section className="py-24">
+          <div className="container mx-auto px-4 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+                Comprehensive IT Solutions
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Each of our services is designed to address specific business challenges 
+                while integrating seamlessly with your existing infrastructure.
+              </p>
+            </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => (
-              <ServiceCard 
-                key={service.title} 
-                service={service} 
-                index={index}
-              />
-            ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {itServices.map((service, index) => (
+                <ServiceCard 
+                  key={service.title} 
+                  service={service} 
+                  index={index}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Non-IT Services Grid */}
-      <section className="py-24 bg-secondary">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              Comprehensive Non-IT Solutions
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Beyond technology, we offer a range of business process services to streamline your operations and drive growth.
-            </p>
-          </motion.div>
+      {showNonIt && (
+        <section className="py-24 bg-secondary">
+          <div className="container mx-auto px-4 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+                Comprehensive Non-IT Solutions
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Beyond technology, we offer a range of business process services to streamline your operations and drive growth.
+              </p>
+            </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {nonItServices.map((service, index) => (
-              <ServiceCard 
-                key={service.title} 
-                service={service} 
-                index={index}
-              />
-            ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {nonItServices.map((service, index) => (
+                <ServiceCard 
+                  key={service.title} 
+                  service={service} 
+                  index={index}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <Footer />
     </main>

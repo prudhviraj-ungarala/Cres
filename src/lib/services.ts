@@ -34,7 +34,11 @@ export const services = [
       "Legacy System Modernization",
       "Quality Assurance & Testing",
     ],
-    details: "Our expert developers craft scalable, maintainable software using modern technologies like React, Node.js, Python, and .NET. We follow agile methodologies to ensure rapid delivery without compromising quality.",
+    details: `Our expert developers design and deliver scalable, secure, and maintainable software solutions tailored precisely to your business goals. Leveraging modern technologies such as React, Node.js, Python, and .NET, we ensure that every application is built with performance, flexibility, and long-term growth in mind.
+
+Quality is at the core of everything we do. We follow agile development methodologies to enable transparency, continuous improvement, and rapid delivery—without ever compromising on standards. Each project undergoes rigorous testing and quality assurance processes, including functional testing, performance validation, and security checks, to guarantee robust and reliable outcomes.
+
+Our development approach emphasizes clean architecture, reusable components, and industry best practices, ensuring that the software remains easy to maintain and enhance over time. By combining technical excellence with a deep understanding of client requirements, we consistently deliver solutions that drive efficiency, innovation, and lasting client satisfaction.`,
     image: softwareDev,
     type: "it"
   },
@@ -49,7 +53,11 @@ export const services = [
       "DevOps & CI/CD Implementation",
       "Cost Optimization",
     ],
-    details: "We help businesses leverage the full potential of cloud computing. From initial assessment to complete migration, our team ensures minimal downtime and maximum ROI on your cloud investment.",
+    details: `We empower organizations to modernize their IT infrastructure by delivering secure, scalable, and cost-effective cloud solutions tailored to their business goals. Our cloud journey begins with a thorough assessment of your existing systems, applications, and workloads to identify the most suitable cloud model and migration approach.
+
+From strategy and architecture design to seamless migration and post-deployment optimization, we ensure minimal downtime, data integrity, and business continuity throughout the process. Our experts work across leading cloud platforms to help you adopt modern cloud-native services, improve application performance, enhance security, and enable future scalability.
+
+Whether you are moving from on-premises to cloud, migrating between cloud providers, or optimizing your current cloud environment, we focus on delivering high availability, operational efficiency, and measurable ROI. With DevOps automation, monitoring, and cost-management best practices, we help your business stay agile, resilient, and ready for growth in a cloud-first world.`,
     image: cloudComputing,
     type: "it"
   },
@@ -64,7 +72,11 @@ export const services = [
       "Recommendation Systems",
       "Process Automation",
     ],
-    details: "Our AI solutions transform raw data into actionable insights. From chatbots to predictive maintenance systems, we build intelligent applications that learn and improve over time.",
+    details: `We design and develop intelligent AI and Machine Learning solutions that help businesses turn data into meaningful decisions and competitive advantages. Our approach starts with understanding your business objectives, data sources, and workflows to build models that deliver real-world impact.
+
+From intelligent chatbots and recommendation engines to advanced predictive analytics and computer vision systems, our solutions are designed to learn, adapt, and improve over time. We focus on building scalable, secure, and explainable AI models that integrate seamlessly with your existing applications and infrastructure.
+
+By leveraging modern ML frameworks and automation pipelines, we enable faster model training, deployment, and continuous optimization. Our AI solutions help organizations enhance customer experiences, automate complex processes, reduce operational costs, and unlock new growth opportunities through data-driven intelligence.`,
     image: aiMl,
     type: "it"
   },
@@ -79,7 +91,11 @@ export const services = [
       "Real-time Analytics",
       "Data Visualization",
     ],
-    details: "Make data-driven decisions with our comprehensive analytics solutions. We design and implement data infrastructures that provide real-time insights and support strategic planning.",
+    details: `We help organizations unlock the true value of their data by transforming raw information into clear, actionable business intelligence. Our data analytics and BI solutions are designed to provide accurate insights that support smarter decision-making, performance tracking, and long-term strategic planning.
+
+From building robust data warehouses and ETL pipelines to delivering interactive dashboards and real-time analytics, we ensure your data is reliable, accessible, and easy to understand. Our team integrates data from multiple sources, cleans and structures it efficiently, and presents it through intuitive visualizations tailored to your business needs.
+
+By enabling real-time reporting and advanced analytics, we empower stakeholders to monitor KPIs, identify trends, and respond quickly to changing business conditions. Our solutions help improve operational efficiency, enhance forecasting accuracy, and drive data-driven growth across the organization.`,
     image: dataAnalytics,
     type: "it"
   },
@@ -88,7 +104,11 @@ export const services = [
     slug: "web-development",
     description: "Modern, responsive web applications",
     image: webDev,
-    details: "Build stunning, high-performance websites that engage your audience. We create responsive, SEO-optimized web solutions using the latest frameworks and best practices.",
+    details: `We build modern, scalable, and high-performance web applications that deliver exceptional user experiences across all devices. Our web development process focuses on creating visually engaging interfaces combined with robust functionality to help businesses establish a strong digital presence.
+
+From responsive corporate websites to advanced web applications and e-commerce platforms, we use the latest technologies and frameworks to ensure speed, security, and reliability. Every solution is optimized for SEO, accessibility, and performance to maximize reach and user engagement.
+
+We follow best development practices, including clean code architecture, cross-browser compatibility, and performance optimization. By integrating modern features such as Progressive Web Apps, content management systems, and secure payment solutions, we help businesses grow, convert visitors into customers, and scale effortlessly in a competitive digital landscape.`,
     features: ["Responsive Design", "Progressive Web Apps", "E-commerce Solutions", "CMS Development"],
     type: "it"
   },
@@ -103,7 +123,11 @@ export const services = [
       "App Store Optimization",
       "Ongoing Maintenance",
     ],
-    details: "Engage your customers on any device with our mobile solutions. We build high-performance apps using React Native, Flutter, and native technologies that deliver exceptional user experiences.",
+    details: `We create powerful, intuitive, and scalable mobile applications that help businesses connect with their customers anytime, anywhere. Our mobile app development services focus on delivering seamless performance, engaging design, and reliable functionality across both iOS and Android platforms.
+
+Whether you need a native application or a cross-platform solution, our team leverages modern frameworks and technologies to build apps that are fast, secure, and user-friendly. We emphasize clean architecture, smooth navigation, and consistent user experiences to ensure high adoption and long-term engagement.
+
+From UI/UX design and development to app store deployment and ongoing maintenance, we manage the complete mobile app lifecycle. Our solutions are optimized for performance, scalability, and future enhancements, enabling your business to grow and evolve in the mobile-first digital landscape.`,
     image: mobileDev,
     type: "it"
   },
@@ -118,7 +142,11 @@ export const services = [
       "Project Management",
       "Training & Support",
     ],
-    details: "Our consultants bring decades of combined experience to help you navigate complex technology decisions. We provide objective, vendor-agnostic advice that puts your interests first.",
+    details: `We provide strategic IT consulting services that help organizations align technology initiatives with their business objectives. Our consultants work closely with stakeholders to understand current challenges, evaluate existing systems, and identify opportunities where technology can drive efficiency, innovation, and growth.
+
+With a vendor-agnostic approach, we deliver unbiased recommendations tailored to your unique needs. From technology assessments and IT roadmap creation to vendor selection and project oversight, we ensure that every decision supports long-term business success and risk reduction.
+
+Our consulting services extend beyond planning to include implementation guidance, change management, and team enablement. By combining deep technical expertise with strong business insight, we help organizations modernize their IT landscape, optimize investments, and build a resilient foundation for future transformation.`,
     image: itConsulting,
     type: "it"
   },
@@ -127,7 +155,11 @@ export const services = [
     slug: "devops-ci-cd",
     description: "Continuous integration & deployment pipelines",
     image: devops,
-    details: "Accelerate your software delivery with our DevOps practices. We implement automated pipelines, infrastructure as code, and continuous monitoring for faster, reliable releases.",
+    details: `We help organizations accelerate software delivery by implementing modern DevOps practices and fully automated CI/CD pipelines. Our approach focuses on reducing deployment time, minimizing errors, and ensuring consistent, high-quality releases across development, testing, and production environments.
+
+By adopting infrastructure as code, containerization, and automated testing, we enable faster and more reliable application deployments. Our DevOps solutions promote collaboration between development and operations teams while improving system stability, scalability, and security.
+
+We also implement continuous monitoring and logging to provide real-time visibility into application performance and infrastructure health. Through proactive alerts and performance insights, we help teams quickly identify issues, optimize resources, and maintain uninterrupted service delivery as your applications scale.`,
     features: ["Pipeline Automation", "Container Orchestration", "Infrastructure as Code", "Monitoring & Logging"],
     type: "it"
   },
@@ -136,7 +168,11 @@ export const services = [
     slug: "database-management",
     description: "Database design, optimization & maintenance",
     image: database,
-    details: "Ensure your data is always available, secure, and performing optimally. Our database experts handle design, optimization, migration, and ongoing maintenance.",
+    details: `We provide end-to-end database management services to ensure your data remains secure, highly available, and optimized for performance. Our team designs robust database architectures that support scalability, reliability, and efficient data access for mission-critical applications.
+
+From performance tuning and query optimization to seamless data migration and version upgrades, we proactively manage your databases to minimize downtime and prevent issues before they impact operations. We implement best practices for indexing, storage optimization, and capacity planning to maintain consistent performance as your data grows.
+
+Our services also include automated backups, disaster recovery planning, and continuous monitoring to safeguard your data against loss and security threats. By ensuring data integrity, availability, and compliance, we help organizations confidently rely on their databases as a foundation for business continuity and growth.`,
     features: ["Database Design", "Performance Tuning", "Data Migration", "Backup & Recovery"],
     type: "it"
   },
@@ -145,7 +181,11 @@ export const services = [
     slug: "xml-processing",
     description: "Data transformation & XML management",
     image: xmlProcessing,
-    details: "Expert XML data processing and transformation services. We handle complex data conversions, validation, and management to ensure seamless data integration across your systems.",
+    details: `We deliver reliable and efficient XML processing solutions that enable seamless data exchange across diverse systems and platforms. Our services focus on transforming, validating, and managing XML data to ensure accuracy, consistency, and compatibility in complex enterprise environments.
+
+From XML schema design and validation to large-scale data transformation and format conversion, we handle structured data with precision and performance in mind. Our solutions support integration between legacy systems, modern applications, and third-party services while maintaining data integrity.
+
+By leveraging industry standards and proven methodologies, we help organizations automate data workflows, reduce manual processing, and ensure smooth, error-free data communication across their digital ecosystem.`,
     features: ["XML Transformation", "Data Validation", "Schema Management", "Format Conversion"],
     type: "non-it"
   },
@@ -154,7 +194,11 @@ export const services = [
     slug: "lead-generation",
     description: "Qualified leads for business growth",
     image: leadGeneration,
-    details: "Fuel your sales pipeline with qualified leads. Our lead generation strategies combine research, outreach, and qualification to deliver prospects ready for conversion.",
+    details: `We help businesses accelerate revenue growth by delivering high-quality, sales-ready leads tailored to their target market. Our lead generation services combine in-depth market research, data-driven targeting, and multi-channel outreach to connect you with prospects who are genuinely interested in your offerings.
+
+From identifying ideal customer profiles to building verified prospect databases and qualifying leads, we ensure that your sales team spends time engaging with the right opportunities. Our structured qualification process filters prospects based on relevance, intent, and readiness to convert.
+
+By aligning lead generation strategies with your business goals, we create a consistent and scalable pipeline that improves conversion rates, shortens sales cycles, and drives sustainable business growth.`,
     features: ["B2B Lead Generation", "Market Research", "Lead Qualification", "Database Building"],
     type: "non-it"
   },
@@ -163,7 +207,11 @@ export const services = [
     slug: "bpo-services",
     description: "Business process outsourcing solutions",
     image: bpo,
-    details: "Streamline your operations with our comprehensive BPO services. We handle your back-office processes efficiently, allowing you to focus on core business activities.",
+    details: `We provide reliable and scalable Business Process Outsourcing (BPO) services designed to improve operational efficiency and reduce costs. By managing essential back-office and support functions, we allow businesses to focus on their core competencies and strategic growth initiatives.
+
+Our BPO solutions are tailored to your specific business requirements, combining skilled professionals, standardized processes, and technology-driven workflows. From customer support and data management to administrative and operational tasks, we ensure consistent service quality and measurable performance outcomes.
+
+With a strong focus on process optimization, quality assurance, and compliance, we deliver cost-effective outsourcing solutions that enhance productivity, improve service delivery, and support long-term business success.`,
     features: ["Back-Office Operations", "Process Optimization", "Cost Reduction", "Quality Assurance"],
     type: "non-it"
   },
@@ -172,7 +220,11 @@ export const services = [
     slug: "document-management",
     description: "Digital document organization & storage",
     image: documentManagement,
-    details: "Transform your document workflows with digital solutions. We help you organize, store, and retrieve documents efficiently while ensuring security and compliance.",
+    details: `We help organizations digitize, organize, and manage documents efficiently with secure and scalable document management solutions. Our services transform paper-based and fragmented digital files into structured, searchable, and easily accessible document repositories.
+
+From digital archiving and intelligent indexing to workflow automation and secure storage, we streamline document lifecycles and improve collaboration across teams. Our solutions ensure quick document retrieval, reduced manual effort, and improved operational efficiency.
+
+With a strong focus on data security, access control, and compliance, we safeguard sensitive information while enabling seamless document sharing and long-term storage. By modernizing document workflows, we help businesses reduce costs, improve productivity, and maintain complete control over their information assets.`,
     features: ["Digital Archiving", "Document Indexing", "Workflow Automation", "Secure Storage"],
     type: "non-it"
   },
@@ -181,7 +233,11 @@ export const services = [
     slug: "data-entry",
     description: "Accurate & efficient data processing",
     image: dataEntry,
-    details: "High-accuracy data entry services to support your operations. Our trained professionals ensure data integrity while meeting your volume and timeline requirements.",
+    details: `We deliver accurate, reliable, and efficient data entry services that help organizations maintain clean and well-structured data. Our trained professionals follow strict quality control processes to ensure precision, consistency, and data integrity across all projects.
+
+From large-volume data entry to data cleansing and validation, we handle information in multiple formats while meeting tight timelines. Our scalable processes are designed to adapt to fluctuating workloads without compromising accuracy or turnaround time.
+
+With a strong focus on confidentiality and security, we ensure that your data is handled safely and in compliance with industry standards. By outsourcing data entry tasks to our experts, businesses can reduce operational overhead, improve efficiency, and focus on core strategic activities.`,
     features: ["High Accuracy", "Fast Turnaround", "Quality Control", "Multiple Format Support"],
     type: "non-it"
   },
@@ -190,7 +246,11 @@ export const services = [
     slug: "customer-support",
     description: "24/7 customer service solutions",
     image: customerSupport,
-    details: "Deliver exceptional customer experiences with our support services. We provide multi-channel support to ensure your customers receive timely, professional assistance.",
+    details: `We provide reliable, scalable, and results-driven solutions designed to support your business operations and growth objectives. Our services combine skilled professionals, standardized processes, and technology-driven workflows to deliver high-quality outcomes with efficiency and accuracy.
+
+By focusing on process optimization, data security, and performance monitoring, we ensure consistent service delivery and measurable business value. Our approach enables organizations to reduce operational overhead, improve productivity, and maintain flexibility in a rapidly evolving digital environment.
+
+Whether supporting core IT initiatives or managing essential business processes, we work as a trusted partner to help you achieve operational excellence, customer satisfaction, and long-term success.`,
     features: ["24/7 Availability", "Multi-Channel Support", "Ticket Management", "Customer Satisfaction"],
     type: "non-it"
   },
@@ -199,7 +259,11 @@ export const services = [
     slug: "market-research",
     description: "Competitive analysis & market insights",
     image: marketResearch,
-    details: "Make informed business decisions with comprehensive market research. We provide actionable insights into market trends, competitors, and customer behavior.",
+    details: `We provide reliable and insight-driven market research services designed to support informed business decisions and strategic planning. Our approach combines structured research methodologies, data analysis, and industry expertise to deliver accurate and actionable market intelligence.
+
+By focusing on competitive analysis, consumer behavior, and market trends, we help organizations understand their position in the market and identify growth opportunities. Our research processes are standardized, data-driven, and tailored to align with your business objectives.
+
+Through clear reporting and actionable insights, we enable businesses to reduce risk, strengthen market strategies, and make confident decisions that drive sustainable growth in a competitive environment.`,
     features: ["Competitive Analysis", "Consumer Insights", "Trend Analysis", "Industry Reports"],
     type: "non-it"
   },
@@ -208,7 +272,11 @@ export const services = [
     slug: "content-writing",
     description: "Professional content creation & management",
     image: contentWriting,
-    details: "Engage your audience with compelling content. Our professional writers create SEO-optimized content that drives traffic, engagement, and conversions.",
+    details: `We provide reliable and results-driven content writing services designed to support brand communication, digital presence, and business growth. Our approach combines skilled writers, structured content strategies, and industry best practices to deliver high-quality, audience-focused content.
+
+By focusing on clarity, relevance, and SEO optimization, we help organizations communicate their message effectively across multiple channels. Our content creation process is standardized, scalable, and aligned with your business objectives to ensure consistency and impact.
+
+Through well-researched and professionally crafted content, we enable businesses to increase engagement, improve search visibility, and build long-term credibility in a competitive digital landscape.`,
     features: ["Blog Writing", "Copywriting", "Technical Writing", "SEO Content"],
     type: "non-it"
   },
@@ -217,7 +285,11 @@ export const services = [
     slug: "quality-assurance",
     description: "Non-technical QA & testing services",
     image: qualityAssurance,
-    details: "Ensure excellence with our quality assurance services. We implement rigorous testing and review processes to maintain the highest standards in your deliverables.",
+    details: `We provide reliable and structured quality assurance services designed to ensure accuracy, consistency, and compliance across business deliverables. Our approach combines standardized review processes, experienced QA professionals, and performance-driven checks to maintain high-quality outcomes.
+
+By focusing on process audits, documentation reviews, and compliance validation, we help organizations identify gaps, reduce errors, and improve overall operational quality. Our quality assurance practices are scalable and aligned with your business objectives.
+
+Through continuous monitoring and improvement, we enable businesses to strengthen quality standards, minimize risk, and deliver dependable results that meet internal and external expectations.`,
     features: ["Process Audits", "Quality Reviews", "Documentation QA", "Compliance Checks"],
     type: "non-it"
   },
@@ -226,7 +298,11 @@ export const services = [
     slug: "administrative-support",
     description: "Virtual admin & back-office support",
     image: adminSupport,
-    details: "Efficient administrative support to keep your business running smoothly. Our virtual assistants handle scheduling, correspondence, and office management tasks.",
+    details: `We provide reliable and scalable administrative support services designed to streamline daily operations and improve business efficiency. Our approach combines skilled virtual assistants, standardized workflows, and technology-enabled processes to deliver dependable back-office support.
+
+By managing scheduling, correspondence, and office coordination tasks, we help organizations reduce administrative workload and maintain operational continuity. Our services are flexible and aligned with your business objectives, ensuring consistent performance and timely support.
+
+Through structured processes and quality-driven execution, we enable businesses to focus on core priorities while maintaining smooth and organized administrative operations.`,
     features: ["Virtual Assistance", "Scheduling", "Email Management", "Office Coordination"],
     type: "non-it"
   },

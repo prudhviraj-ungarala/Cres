@@ -47,14 +47,8 @@ export const Navbar = () => {
             <motion.div whileHover={{
             scale: 1.05
           }} className="relative">
-              <img src={logo} alt="CGS Logo" className="w-12 h-12 rounded-xl shadow-lg shadow-primary/30 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300" />
+              <img src={logo} alt="CGS Logo" className="h-12 w-24 shadow-lg shadow-primary/30 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300" />
             </motion.div>
-            <div className="hidden sm:block">
-              <span className="font-heading font-bold text-lg text-foreground">
-                Crestonix
-              </span>
-              <span className="font-heading font-bold text-lg text-primary ml-1">Global Solutions</span>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}

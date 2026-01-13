@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
 import logo from "@/assets/LoGo.png";
 
 const footerLinks = {
@@ -10,9 +10,6 @@ const footerLinks = {
   }, {
     name: "Services",
     href: "/services"
-  }, {
-    name: "Careers",
-    href: "/contact"
   }, {
     name: "Contact",
     href: "/contact"
@@ -25,6 +22,12 @@ const footerLinks = {
     href: "/services"
   }, {
     name: "AI & Machine Learning",
+    href: "/services"
+  }, {
+    name: "XML processing",
+    href: "/services"
+  }, {
+    name: "Lead generation",
     href: "/services"
   }],
   resources: [{
@@ -46,16 +49,8 @@ const socialLinks = [{
   href: "https://www.linkedin.com/company/crestonix-global-solutions-private-limited/posts/?feedView=all",
   label: "LinkedIn"
 }, {
-  icon: Twitter,
-  href: "#",
-  label: "Twitter"
-}, {
-  icon: Facebook,
-  href: "#",
-  label: "Facebook"
-}, {
   icon: Instagram,
-  href: "#",
+  href: "https://www.instagram.com/crestonixglobalsolutions?igsh=MWYwdTJlM2Vja2thbQ==",
   label: "Instagram"
 }];
 export const Footer = () => {
