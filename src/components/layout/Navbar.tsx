@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/LoGo.png";
+
 const navLinks = [{
   name: "Home",
   href: "/"
@@ -45,7 +47,7 @@ export const Navbar = () => {
             <motion.div whileHover={{
             scale: 1.05
           }} className="relative">
-              <img src="/src/assets/LoGo.png" alt="CGS Logo" className="w-12 h-12 rounded-xl shadow-lg shadow-primary/30 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300" />
+              <img src={logo} alt="CGS Logo" className="w-12 h-12 rounded-xl shadow-lg shadow-primary/30 group-hover:shadow-xl group-hover:shadow-primary/40 transition-all duration-300" />
             </motion.div>
             <div className="hidden sm:block">
               <span className="font-heading font-bold text-lg text-foreground">

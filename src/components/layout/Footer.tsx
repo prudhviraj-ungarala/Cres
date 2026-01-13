@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
+import logo from "@/assets/LoGo.png";
+
 const footerLinks = {
   company: [{
     name: "About Us",
@@ -64,7 +66,7 @@ export const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <img src="/src/assets/LoGo.png" alt="CGS Logo" className="w-12 h-12 rounded-xl" />
+              <img src={logo} alt="CGS Logo" className="w-12 h-12 rounded-xl" />
               <div>
                 <span className="font-heading font-bold text-lg text-background">
                   Crestonix

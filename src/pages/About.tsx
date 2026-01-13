@@ -231,7 +231,7 @@ const About = () => {
               {/* CEO Image */}
               <div className="flex-shrink-0">
                 <div className="w-48 h-48 lg:w-64 lg:h-64 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center overflow-hidden">
-                  <img alt="Pulla Eswar Sudheer" className="w-full h-full object-cover border-destructive-foreground rounded-none shadow-none opacity-100" src="public/Uploads/3b880324-f000-4e5d-8ae2-ab5ed014a89c.jpg"/>
+                  <img alt="Pulla Eswar Sudheer" className="w-full h-full object-cover border-destructive-foreground rounded-none shadow-none opacity-100" src="/Uploads/3b880324-f000-4e5d-8ae2-ab5ed014a89c.jpg"/>
                 </div>
               </div>
 
