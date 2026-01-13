@@ -60,8 +60,8 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-6">
-              <img src={logo} alt="CGS Logo" className="w-12 h-12 rounded-xl" />
+            <Link to="/" className="flex items-center gap-4 mb-6">
+              <img src={logo} alt="CGS Logo" className="w-20 h-20 rounded-2xl" />
               <div>
                 <span className="font-heading font-bold text-lg text-background">
                   Crestonix
@@ -135,7 +135,7 @@ export const Footer = () => {
         <div className="container mx-auto px-4 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-background/60 text-sm">
-              © 2025 Crestonix Global Solutions. All rights reserved.
+              © 2026 Crestonix Global Solutions. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link to="/privacy-policy" className="text-background/60 hover:text-primary text-sm transition-colors">

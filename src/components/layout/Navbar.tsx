@@ -47,7 +47,7 @@ export const Navbar = () => {
             <motion.div whileHover={{
             scale: 1.05
           }} className="relative">
-              <img src={logo} alt="CGS Logo" className="h-10 w-24 transition-all duration-300" />
+              <img src={logo} alt="CGS Logo" className="h-12 w-28 transition-all duration-300" />
             </motion.div>
           </Link>
 
